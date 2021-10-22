@@ -16,8 +16,11 @@ window.onload = function() {
 
 function App() {
 
+  const device = deviceType();
+  // const device = "mobile";
+
   const groupStyle = {
-    height: deviceType() == "mobile" ? window.innerHeight : "100vh"
+    height: device == "mobile" ? window.innerHeight : "100vh"
   };
 
 	return (
@@ -122,11 +125,24 @@ function App() {
         <div className="parallax-layer parallax-layer--back">
           <header className="header">
             {
-                deviceType() == "mobile" ? 
+                device == "mobile" ? 
 
-                <ul>
-                  <li><img href="#" src="./media/logo.png" alt="" /></li>
-                </ul> 
+                <div>
+                  <ul>
+                    <li><img href="#" src="./media/logo.png" alt="" /></li>
+                  </ul>
+                  <ul>
+                    <li><a className="desktop" href="#" onClick={() => {
+                      spawnText('text-block-1');
+                    }}>NFT</a></li>
+                    <li><a className="desktop" href="#" onClick={() => {
+                      spawnText('text-block-2');
+                    }}>About The Game</a></li>
+                    <li><a className="mobile" href="#" onClick={() => {
+                      spawnText('text-block-3');
+                    }}>Play Demo</a></li>
+                  </ul>
+                </div>
 
                 :
 
