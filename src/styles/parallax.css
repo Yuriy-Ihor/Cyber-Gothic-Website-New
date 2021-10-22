@@ -37,6 +37,5 @@
     display: flex;
     justify-content: center;
     position: relative;
-    height: 100vh;
     transform-style: preserve-3d;
 }
