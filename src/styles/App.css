@@ -102,8 +102,8 @@
   height: fit-content;
   width: 80%;
   font-size: larger;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .fade-in {
@@ -129,6 +129,10 @@
   width: fit-content;
   padding: 10px 20px;
   pointer-events: all;
+  text-decoration: none;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .play-button:hover {

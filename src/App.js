@@ -115,7 +115,7 @@ function App() {
               Praesent commodo dictum urna, a blandit dui dignissim vel. 
               Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             </p> */}
-            <a className="play-button">Play Demo</a>
+            <a href="#" className="play-button">Play Demo</a>
           </div>
         </div>
 
