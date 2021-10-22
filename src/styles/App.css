@@ -69,6 +69,7 @@
 }
 
 .header img {
+  pointer-events: all;
   cursor: pointer;
   width: 350px;
 }
