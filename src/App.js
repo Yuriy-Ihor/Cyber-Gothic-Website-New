@@ -129,7 +129,7 @@ function App() {
 
                 <div>
                   <ul>
-                    <li><img href="#" src="./media/logo.png" alt="" /></li>
+                    <li><img className="mobile-img" href="#" src="./media/logo.png" alt="" /></li>
                   </ul>
                   <ul>
                     <li><a className="desktop" href="#" onClick={() => {
@@ -164,11 +164,12 @@ function App() {
 
         <div className="parallax-layer parallax-layer--back">
           <footer className="footer">
-          <ul>
+            <ul>
               <li><a href="#">Twitter</a></li>
               <li><a href="#">Discord</a></li>
               <li><a href="#">Email</a></li>
             </ul>
+            <p><span>&#169;</span> Cyber Gothica, Ukraine, {new Date().getFullYear()}. All rights reserved.</p>
           </footer>
         </div>
 
