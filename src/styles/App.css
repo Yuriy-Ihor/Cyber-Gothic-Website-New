@@ -20,7 +20,8 @@
   padding-bottom: 20px;
   width: 100%;
   height: fit-content;
-  background-image: linear-gradient(black, transparent);
+  background-image: linear-gradient(black 50%, transparent);
+  padding-bottom: 20px;
 }
 
 .header ul {
@@ -70,14 +71,25 @@
 }
 
 .header img {
+  pointer-events: all;
   cursor: pointer;
   width: 350px;
+}
+
+.header .mobile-img {
+  width: 250px;
 }
 
 .footer {
   width: 50%;
   height: fit-content;
   margin-top: auto;
+  font-size: smaller;
+}
+
+.footer p {
+  color: grey;
+  text-align: center;
 }
 
 .footer ul {
@@ -93,9 +105,15 @@
 }
 
 .footer a {
+  transition: all ease-in-out 0.3s;
   pointer-events: all;
   text-decoration: none;
   color: gray;
+}
+
+.footer a:hover {
+  transition: all ease-in-out 0.3s;
+  color: white;
 }
 
 .text {
@@ -104,8 +122,8 @@
   height: fit-content;
   width: 80%;
   font-size: larger;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .fade-in {
@@ -131,6 +149,10 @@
   width: fit-content;
   padding: 10px 20px;
   pointer-events: all;
+  text-decoration: none;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .play-button:hover {

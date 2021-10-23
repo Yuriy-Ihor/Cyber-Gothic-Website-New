@@ -16,8 +16,11 @@ window.onload = function() {
 
 function App() {
 
+  const device = deviceType();
+  // const device = "mobile";
+
   const groupStyle = {
-    height: deviceType() == "mobile" ? window.innerHeight : "100vh"
+    height: device == "mobile" ? window.innerHeight : "100vh"
   };
 
 	return (
@@ -115,18 +118,31 @@ function App() {
               Praesent commodo dictum urna, a blandit dui dignissim vel. 
               Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
             </p> */}
-            <a className="play-button">Play Demo</a>
+            <a href="#" className="play-button">Play Demo</a>
           </div>
         </div>
 
         <div className="parallax-layer parallax-layer--back">
           <header className="header">
             {
-                deviceType() == "mobile" ? 
+                device == "mobile" ? 
 
-                <ul>
-                  <li><img href="#" src="./media/logo.png" alt="" /></li>
-                </ul> 
+                <div>
+                  <ul>
+                    <li><img className="mobile-img" href="#" src="./media/logo.png" alt="" /></li>
+                  </ul>
+                  <ul>
+                    <li><a className="desktop" href="#" onClick={() => {
+                      spawnText('text-block-1');
+                    }}>NFT</a></li>
+                    <li><a className="desktop" href="#" onClick={() => {
+                      spawnText('text-block-2');
+                    }}>About The Game</a></li>
+                    <li><a className="mobile" href="#" onClick={() => {
+                      spawnText('text-block-3');
+                    }}>Play Demo</a></li>
+                  </ul>
+                </div>
 
                 :
 
@@ -148,11 +164,12 @@ function App() {
 
         <div className="parallax-layer parallax-layer--back">
           <footer className="footer">
-          <ul>
+            <ul>
               <li><a href="#">Twitter</a></li>
               <li><a href="#">Discord</a></li>
               <li><a href="#">Email</a></li>
             </ul>
+            <p><span>&#169;</span> Cyber Gothica, Ukraine, {new Date().getFullYear()}. All rights reserved.</p>
           </footer>
         </div>
 
