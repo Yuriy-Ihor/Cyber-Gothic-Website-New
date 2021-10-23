@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Cyber-Gothic-Website-New/static/css/main.d39cfbd7.chunk.css",
-    "main.js": "/Cyber-Gothic-Website-New/static/js/main.2f7968d5.chunk.js",
-    "main.js.map": "/Cyber-Gothic-Website-New/static/js/main.2f7968d5.chunk.js.map",
-    "runtime-main.js": "/Cyber-Gothic-Website-New/static/js/runtime-main.5748d4ff.js",
-    "runtime-main.js.map": "/Cyber-Gothic-Website-New/static/js/runtime-main.5748d4ff.js.map",
-    "static/js/2.16ffb8fb.chunk.js": "/Cyber-Gothic-Website-New/static/js/2.16ffb8fb.chunk.js",
-    "static/js/2.16ffb8fb.chunk.js.map": "/Cyber-Gothic-Website-New/static/js/2.16ffb8fb.chunk.js.map",
-    "static/js/3.ddc99d98.chunk.js": "/Cyber-Gothic-Website-New/static/js/3.ddc99d98.chunk.js",
-    "static/js/3.ddc99d98.chunk.js.map": "/Cyber-Gothic-Website-New/static/js/3.ddc99d98.chunk.js.map",
-    "index.html": "/Cyber-Gothic-Website-New/index.html",
-    "static/css/main.d39cfbd7.chunk.css.map": "/Cyber-Gothic-Website-New/static/css/main.d39cfbd7.chunk.css.map",
-    "static/js/2.16ffb8fb.chunk.js.LICENSE.txt": "/Cyber-Gothic-Website-New/static/js/2.16ffb8fb.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/Cyber-Gothic-Website-New/static/media/matamata.regular.339bc7fc.otf"
+    "main.css": "/static/css/main.3ef0bff2.chunk.css",
+    "main.js": "/static/js/main.5a54c493.chunk.js",
+    "main.js.map": "/static/js/main.5a54c493.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.160ee74b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.160ee74b.js.map",
+    "static/js/2.16ffb8fb.chunk.js": "/static/js/2.16ffb8fb.chunk.js",
+    "static/js/2.16ffb8fb.chunk.js.map": "/static/js/2.16ffb8fb.chunk.js.map",
+    "static/js/3.ddc99d98.chunk.js": "/static/js/3.ddc99d98.chunk.js",
+    "static/js/3.ddc99d98.chunk.js.map": "/static/js/3.ddc99d98.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.3ef0bff2.chunk.css.map": "/static/css/main.3ef0bff2.chunk.css.map",
+    "static/js/2.16ffb8fb.chunk.js.LICENSE.txt": "/static/js/2.16ffb8fb.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/matamata.regular.339bc7fc.otf"
   },
   "entrypoints": [
-    "static/js/runtime-main.5748d4ff.js",
+    "static/js/runtime-main.160ee74b.js",
     "static/js/2.16ffb8fb.chunk.js",
-    "static/css/main.d39cfbd7.chunk.css",
-    "static/js/main.2f7968d5.chunk.js"
+    "static/css/main.3ef0bff2.chunk.css",
+    "static/js/main.5a54c493.chunk.js"
   ]
 }
