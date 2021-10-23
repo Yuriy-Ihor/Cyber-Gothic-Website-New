@@ -68,15 +68,18 @@ function App() {
                     }}>NFT</a></li>
                     <li><a href="#" onClick={() => {
                       spawnText('text-block-2');
-                    }}>Generations</a></li>
+                    }}>Merge</a></li>
                     <li><a href="#" onClick={() => {
                       spawnText('text-block-3');
-                    }}>Game</a></li>
+                    }}>Generations</a></li>
                     <li><a href="#" onClick={() => {
                       spawnText('text-block-4');
-                    }}>Demo</a></li>
+                    }}>Game</a></li>
                     <li><a href="#" onClick={() => {
                       spawnText('text-block-5');
+                    }}>Demo</a></li>
+                    <li><a href="#" onClick={() => {
+                      spawnText('text-block-6');
                     }}>Vision</a></li>
                   </ul>
                 </div>
@@ -88,15 +91,18 @@ function App() {
                   }}>NFT</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-2');
-                  }}>Generations</a></li>
+                  }}>Merge</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-3');
-                  }}>Game</a></li>
+                  }}>Generations</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-4');
-                  }}>Demo</a></li>
+                  }}>Game</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-5');
+                  }}>Demo</a></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-6');
                   }}>Vision</a></li>
                 </ul>
             }
@@ -114,27 +120,45 @@ function App() {
                 extend the game for future players. But our initial holders will
                 have the most valued assets in the game and special privileges in
                 the game and abilities unavailable to others.
-              </p>
-              <p>
-                We also plan to implement a NFT merging system.
-                If you collect 4 NFTs from 1 collection (Generation) you can
-                merge them into 1 next Level NFT.
-                After the merge, all 4 NFTs are burned, and 1 new is created.
-                This creates a diminiіhing supply and raises the price and
-                rarity for both levels of NFT holders.
-                NFTs can be merged only within the same collection and within same level.
-                Every merge improves your stats, your NFT value 
-                and creates a more complex Art.
-                It is possible to make a maximum of 4 merges within the collection.
-                Merging is possible only after special events in game.
-              </p>
-              
+              </p>          
             </div>
           </div>
 
           <div className="parallax-layer parallax-layer--back">
             <div className="text" id="text-block-2">
-            <p>
+              <p>
+                We also plan to implement a NFT merging system.
+                <ul>
+                  <li>
+                    If you collect 4 NFTs from 1 collection (Generation) you can
+                    merge them into 1 next Level NFT.
+                  </li>
+                  <li>
+                    After the merge, all 4 NFTs are burned, and 1 new is created.
+                    This creates a diminiіhing supply and raises the price and
+                    rarity for both levels of NFT holders.
+                  </li>
+                  <li>
+                    NFTs can be merged only within the same collection and within same level.
+                  </li>
+                  <li>
+                    Every merge improves your stats, your NFT value 
+                    and creates a more complex Art.
+                  </li>
+                  <li>
+                    It is possible to make a maximum of 4 merges within the collection.
+                  </li>
+                  <li>
+                    Merging is possible only after special events in game.
+                  </li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+          <div className="parallax-layer parallax-layer--back">
+            <div className="text" id="text-block-3">
+              <p>
                 After initial release, there will be 2 more generations of souls.
                 The value of previous generations will be
                 preserved since to get to the initial level
@@ -153,7 +177,7 @@ function App() {
           </div>
 
           <div className="parallax-layer parallax-layer--back">
-            <div className="text" id="text-block-3">
+            <div className="text" id="text-block-4">
               <p>
                 Some warriors go to Valhalla, others go to Hell, while some are 
                 stuck in the Purgatory, where there's no way to truly die. 
@@ -184,11 +208,11 @@ function App() {
           </div>
 
           <div className="parallax-layer parallax-layer--back">
-            <div className="text" id="text-block-4">
+            <div className="text" id="text-block-5">
               <p>
                 We are pleased to present you our current game demo.
-                Done note that this is only a small tiny fraction of the finished game, 
-                and is still woek in progress. Everything you see here is a subject to change. 
+                Do note that this is only a small tiny fraction of the finished game, 
+                and is still work in progress. Everything you see here is a subject to change. 
                 We appreciate feedback in any form, so please contact us with any suggestions 
                 that you might have.
               </p>
@@ -200,7 +224,7 @@ function App() {
         </div>
 
         <div className="parallax-layer parallax-layer--back">
-            <div className="text" id="text-block-5">
+            <div className="text" id="text-block-6">
               <p>
                 Eventually, we plan to create a platform, where people will be
                 able to create their adventures, tournaments, guilds, story
