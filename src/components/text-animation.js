@@ -1,6 +1,6 @@
 // import {$, fadeOut, fadeIn} from 'jquery';
 
-function spawnText(textBlockId, textClass='text', timeout=1500) {
+function spawnText(textBlockId, textClass='text', timeout=300) {
     const block = document.getElementById(textBlockId);
     const blocks = document.getElementsByClassName(textClass);
     for (let i = 0; i < blocks.length; i++) {
