@@ -16,6 +16,8 @@
 }
 
 .header {
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: 100%;
   height: fit-content;
   background-image: linear-gradient(black, transparent);
