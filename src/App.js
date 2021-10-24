@@ -51,8 +51,7 @@ window.onload = function() {
 
 function App() {
 
-  // const device = deviceType();
-  const device = "mobile";
+  const device = deviceType();
 
   const groupStyle = {
     height: device === "mobile" ? window.innerHeight : "100vh"
