@@ -23,14 +23,14 @@ window.onload = function() {
 
   for (let index = 0; index < textBlocks.length; index++) {
     let blockHeight = textBlocks[index].offsetHeight;
-    textBlocks[index].style.marginTop = `${
-      headerHeight * (1 - headerIgnorableCoefficient) + 
-      (
-        documentHeight - 
-        headerHeight * (1 - headerIgnorableCoefficient) - 
-        footerHeight - blockHeight
-      ) / 2
-    }px`; 
+    // textBlocks[index].style.marginTop = `${
+    //   headerHeight * (1 - headerIgnorableCoefficient) + 
+    //   (
+    //     documentHeight - 
+    //     headerHeight * (1 - headerIgnorableCoefficient) - 
+    //     footerHeight - blockHeight
+    //   ) / 2
+    // }px`; 
   }
 }
 
@@ -51,64 +51,10 @@ function App() {
       <div className="parallax-group" style={groupStyle}>
 
         <div className="parallax-layer parallax-layer--back">
-          <img className="background" src="./media/background3.png" alt="" />
+          <img className="background" src={process.env.PUBLIC_URL + "/media/background3.png"} alt="" />
         </div>
 
-        <div className="parallax-layer parallax-layer--back">
-          <header className="header" id="header">
-            {
-                device === "mobile" ? 
-
-                <div className="mobile-header">
-                  <ul>
-                    <li><img className="mobile-img" href="#" src="./media/logo.png" alt="" /></li>
-                  </ul>
-                  <ul>
-                    <li><a href="#" onClick={() => {
-                      spawnText('text-block-1');
-                    }}>NFT</a></li>
-                    <li><a href="#" onClick={() => {
-                      spawnText('text-block-2');
-                    }}>Merge</a></li>
-                    <li><a href="#" onClick={() => {
-                      spawnText('text-block-3');
-                    }}>Generations</a></li>
-                    <li><a href="#" onClick={() => {
-                      spawnText('text-block-4');
-                    }}>Game</a></li>
-                    <li><a href="#" onClick={() => {
-                      spawnText('text-block-5');
-                    }}>Demo</a></li>
-                    <li><a href="#" onClick={() => {
-                      spawnText('text-block-6');
-                    }}>Vision</a></li>
-                  </ul>
-                </div>
-                :
-                <ul>
-                  <li><img href="#" src="./media/logo.png" alt="" /></li>
-                  <li><a href="#" onClick={() => {
-                    spawnText('text-block-1');
-                  }}>NFT</a></li>
-                  <li><a href="#" onClick={() => {
-                    spawnText('text-block-2');
-                  }}>Merge</a></li>
-                  <li><a href="#" onClick={() => {
-                    spawnText('text-block-3');
-                  }}>Generations</a></li>
-                  <li><a href="#" onClick={() => {
-                    spawnText('text-block-4');
-                  }}>Game</a></li>
-                  <li><a href="#" onClick={() => {
-                    spawnText('text-block-5');
-                  }}>Demo</a></li>
-                  <li><a href="#" onClick={() => {
-                    spawnText('text-block-6');
-                  }}>Vision</a></li>
-                </ul>
-            }
-          </header>
-        </div>
+        
 
         <div className={`${device}-body-text`}>
           <div className="parallax-layer parallax-layer--back">
@@ -234,6 +180,78 @@ function App() {
               </p>
             </div>
           </div>
+          <div className="parallax-layer parallax-layer--back">
+          <header className="header" id="header">
+            {
+                device === "mobile" ? 
+
+                <div className="mobile-header">
+                  {/* <img className="mobile-img" href="#" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" /> */}
+                  <div id="nav-container">
+                    <div class="bg"></div>
+
+                    <div id="nav-content" tabindex="0">
+                      <ul>
+                        <li><a href="#" onClick={() => {
+                          spawnText('text-block-1');
+                          document.activeElement.blur();
+                        }}>NFT</a></li>
+                        <li><a href="#" onClick={() => {
+                          spawnText('text-block-2');
+                          document.activeElement.blur();
+                        }}>Merge</a></li>
+                        <li><a href="#" onClick={() => {
+                          spawnText('text-block-3');
+                          document.activeElement.blur();
+                        }}>Generations</a></li>
+                        <li><a href="#" onClick={() => {
+                          spawnText('text-block-4');
+                          document.activeElement.blur();
+                        }}>Game</a></li>
+                        <li><a href="#" onClick={() => {
+                          spawnText('text-block-5');
+                          document.activeElement.blur();
+                        }}>Demo</a></li>
+                        <li><a href="#" onClick={() => {
+                          spawnText('text-block-6');
+                          document.activeElement.blur();
+                        }}>Vision</a></li>
+                      </ul>
+                    </div>
+                    <div class="button" tabindex="0">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </div>
+                  </div>
+                </div>
+
+                :
+
+                <ul>
+                  <li><img href="#" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" /></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-1');
+                  }}>NFT</a></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-2');
+                  }}>Merge</a></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-3');
+                  }}>Generations</a></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-4');
+                  }}>Game</a></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-5');
+                  }}>Demo</a></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-6');
+                  }}>Vision</a></li>
+                </ul>
+            }
+          </header>
+        </div>
 
         <div className="parallax-layer parallax-layer--back">
           <footer className="footer" id="footer">
