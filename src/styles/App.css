@@ -48,7 +48,6 @@
   padding: 10px 0px;
   position: relative;
   pointer-events: all;
-  /* margin-top: 20px; */
 }
 
 .header a:after {    
@@ -76,8 +75,18 @@
 }
 
 .header .mobile-img {
-  margin-top: 0;
+  margin-top: 25px;
+  margin-right: 25px;
   width: 250px;
+  float: right;
+}
+
+.no-bg {
+  background: none;
+}
+
+.singular-header li {
+  margin-top: 25px;
 }
 
 .mobile-header #nav-container {
@@ -139,9 +148,9 @@
   margin-top: 5px;
 }
 
-.mobile-header #nav-container:focus-within .button {
+/* .mobile-header #nav-container:focus-within .button {
   pointer-events: none;
-}
+} */
 
 .mobile-header #nav-container:focus-within .icon-bar:nth-of-type(1) {
   transform: translate3d(0,8px,0) rotate(45deg);
