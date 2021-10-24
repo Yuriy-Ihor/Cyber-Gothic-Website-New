@@ -5,6 +5,8 @@ import './styles/lens-flare.css';
 import {spawnText, despawnAll} from './components/text-animation';
 import {deviceType} from './components/device-type';
 
+let menuIsOpen = false;
+
 window.onload = function() {
   despawnAll();
   spawnText(
@@ -32,6 +34,16 @@ window.onload = function() {
     //   ) / 2
     // }px`; 
   }
+
+  document.getElementById("menu-button").addEventListener(
+    'click',
+    () => {
+      if (menuIsOpen) {
+        document.activeElement.blur();
+      }
+      menuIsOpen = !menuIsOpen;
+    }
+  );
 }
 
 function App() {
@@ -218,7 +230,7 @@ function App() {
                         }}>Vision</a></li>
                       </ul>
                     </div>
-                    <div class="button" tabindex="0">
+                    <div class="button" id="menu-button" tabindex="0">
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
