@@ -35,20 +35,24 @@ window.onload = function() {
   //   }px`; 
   // }
 
-  document.getElementById("menu-button").addEventListener(
-    'click',
-    () => {
-      if (menuIsOpen) {
-        document.activeElement.blur();
+  try {
+    document.getElementById("menu-button").addEventListener(
+      'click',
+      () => {
+        if (menuIsOpen) {
+          document.activeElement.blur();
+        }
+        menuIsOpen = !menuIsOpen;
       }
-      menuIsOpen = !menuIsOpen;
-    }
-  );
+    );
+  } catch (TypeError) {}
+
 }
 
 function App() {
 
-  const device = deviceType();
+  // const device = deviceType();
+  const device = "mobile";
 
   const groupStyle = {
     height: device === "mobile" ? window.innerHeight : "100vh"
@@ -236,7 +240,7 @@ function App() {
 
                 :
 
-                <ul>
+                <ul className="singular-header">
                   <li><img href="#" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" /></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-1');
@@ -261,11 +265,18 @@ function App() {
           </header>
         </div>
 
+        {
+        device === "mobile" ?
         <div className="parallax-layer parallax-layer--back">
           <header className="header no-bg">
             <img href="#" class="mobile-img" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" />
           </header>
         </div>
+
+        :
+
+        <div></div>
+        }
 
         <div className="parallax-layer parallax-layer--back">
           <footer className="footer" id="footer">
