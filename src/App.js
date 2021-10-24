@@ -4,6 +4,7 @@ import './styles/lens-flare.css';
 // import LensBlinkJSX from './components/lens-blink';
 import {spawnText, despawnAll} from './components/text-animation';
 import {deviceType} from './components/device-type';
+import {NftTable} from './NftTable';
 
 let menuIsOpen = false;
 
@@ -45,8 +46,7 @@ window.onload = function() {
         menuIsOpen = !menuIsOpen;
       }
     );
-  } catch (TypeError) {}
-
+  } catch (TypeError) {}  
 }
 
 function App() {
@@ -66,7 +66,7 @@ function App() {
       <div className="parallax-group" style={groupStyle}>
 
         <div className="parallax-layer parallax-layer--back">
-          <img className="background" src={process.env.PUBLIC_URL + "/media/background3.png"} alt="" />
+          <img className="background" src={process.env.PUBLIC_URL + "/media/background.png"} alt="" />
         </div>
 
         <div className={`${device}-body-text`}>
@@ -183,17 +183,25 @@ function App() {
         </div>
 
         <div className="parallax-layer parallax-layer--back">
-            <div className="text instant-fade-out" id="text-block-6">
-              <p>
-                Eventually, we plan to create a platform, where people will be
-                able to create their adventures, tournaments, guilds, story
-                campaigns, and even sell tickets to their worlds and mini-games.
-                You can participate in Lore's creation in our Discord. 
-                Best stories will be added to our story campaigns, since we want it to be community driven.
-              </p>
-            </div>
+          <div className="text instant-fade-out" id="text-block-6">
+            <p>
+              Eventually, we plan to create a platform, where people will be
+              able to create their adventures, tournaments, guilds, story
+              campaigns, and even sell tickets to their worlds and mini-games.
+              You can participate in Lore's creation in our Discord. 
+              Best stories will be added to our story campaigns, since we want it to be community driven.
+            </p>
           </div>
-          <div className="parallax-layer parallax-layer--back">
+        </div>
+
+        <div className="parallax-layer parallax-layer--back">
+          <div className="text instant-fade-out" id="text-block-7">
+            <NftTable />
+          </div>
+        </div>
+
+
+        <div className="parallax-layer parallax-layer--back">
           <header className="header" id="header">
             {
                 device === "mobile" ? 
@@ -228,6 +236,10 @@ function App() {
                           spawnText('text-block-6');
                           document.activeElement.blur();
                         }}>Vision</a></li>
+                        <li><a href="#" onClick={() => {
+                          spawnText('text-block-7');
+                          document.activeElement.blur();
+                        }}>Sneak Peak</a></li>
                       </ul>
                     </div>
                     <div class="button" id="menu-button" tabindex="0">
@@ -244,7 +256,6 @@ function App() {
                   <li><img href="#" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" 
                   onClick={() => {
                     spawnText('text-block-1');
-                    document.activeElement.blur();
                   }}/></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-1');
@@ -264,6 +275,9 @@ function App() {
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-6');
                   }}>Vision</a></li>
+                  <li><a href="#" onClick={() => {
+                    spawnText('text-block-7');
+                  }}>Sneak Peak</a></li>
                 </ul>
             }
           </header>
