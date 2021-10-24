@@ -76,8 +76,14 @@
 }
 
 .header .mobile-img {
-  margin-top: 0;
+  margin-top: 25px;
+  margin-right: 25px;
   width: 250px;
+  float: right;
+}
+
+.no-bg {
+  background: none;
 }
 
 .mobile-header #nav-container {
@@ -200,7 +206,6 @@
   height: fit-content;
   margin-top: auto;
   font-size: smaller;
-  /* background-image: linear-gradient(transparent, black 40%); */
 }
 
 .footer p {

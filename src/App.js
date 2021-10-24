@@ -198,7 +198,6 @@ function App() {
                 device === "mobile" ? 
 
                 <div className="mobile-header">
-                  {/* <img className="mobile-img" href="#" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" /> */}
                   <div id="nav-container">
                     <div class="bg"></div>
 
@@ -262,6 +261,12 @@ function App() {
                   }}>Vision</a></li>
                 </ul>
             }
+          </header>
+        </div>
+
+        <div className="parallax-layer parallax-layer--back">
+          <header className="header no-bg">
+            <img href="#" class="mobile-img" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" />
           </header>
         </div>
 
