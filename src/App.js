@@ -23,17 +23,17 @@ window.onload = function() {
   const headerIgnorableCoefficient = 0.15;
   const footerHeight = footer.offsetHeight;
 
-  for (let index = 0; index < textBlocks.length; index++) {
-    let blockHeight = textBlocks[index].offsetHeight;
-    // textBlocks[index].style.marginTop = `${
-    //   headerHeight * (1 - headerIgnorableCoefficient) + 
-    //   (
-    //     documentHeight - 
-    //     headerHeight * (1 - headerIgnorableCoefficient) - 
-    //     footerHeight - blockHeight
-    //   ) / 2
-    // }px`; 
-  }
+  // for (let index = 0; index < textBlocks.length; index++) {
+  //   let blockHeight = textBlocks[index].offsetHeight;
+  //   textBlocks[index].style.marginTop = `${
+  //     headerHeight * (1 - headerIgnorableCoefficient) + 
+  //     (
+  //       documentHeight - 
+  //       headerHeight * (1 - headerIgnorableCoefficient) - 
+  //       footerHeight - blockHeight
+  //     ) / 2
+  //   }px`; 
+  // }
 
   document.getElementById("menu-button").addEventListener(
     'click',
@@ -48,8 +48,7 @@ window.onload = function() {
 
 function App() {
 
-  // const device = deviceType();
-  const device = "mobile";
+  const device = deviceType();
 
   const groupStyle = {
     height: device === "mobile" ? window.innerHeight : "100vh"
@@ -65,8 +64,6 @@ function App() {
         <div className="parallax-layer parallax-layer--back">
           <img className="background" src={process.env.PUBLIC_URL + "/media/background3.png"} alt="" />
         </div>
-
-        
 
         <div className={`${device}-body-text`}>
           <div className="parallax-layer parallax-layer--back">
