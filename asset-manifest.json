@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Cyber-Gothic-Website-New/static/css/main.05a10f56.chunk.css",
-    "main.js": "/Cyber-Gothic-Website-New/static/js/main.42d63a83.chunk.js",
-    "main.js.map": "/Cyber-Gothic-Website-New/static/js/main.42d63a83.chunk.js.map",
+    "main.js": "/Cyber-Gothic-Website-New/static/js/main.2aba7b62.chunk.js",
+    "main.js.map": "/Cyber-Gothic-Website-New/static/js/main.2aba7b62.chunk.js.map",
     "runtime-main.js": "/Cyber-Gothic-Website-New/static/js/runtime-main.5748d4ff.js",
     "runtime-main.js.map": "/Cyber-Gothic-Website-New/static/js/runtime-main.5748d4ff.js.map",
     "static/js/2.16ffb8fb.chunk.js": "/Cyber-Gothic-Website-New/static/js/2.16ffb8fb.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.5748d4ff.js",
     "static/js/2.16ffb8fb.chunk.js",
     "static/css/main.05a10f56.chunk.css",
-    "static/js/main.42d63a83.chunk.js"
+    "static/js/main.2aba7b62.chunk.js"
   ]
 }
