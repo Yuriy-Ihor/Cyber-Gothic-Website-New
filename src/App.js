@@ -157,10 +157,8 @@ function App() {
                     Tournament — where you will fight other players.
                   </li>
                   <li>
-                    Story Campaign — where you can get familiar with the ore
-                    of the Game and our system will be tested for the future
-                    Turn-Based MMORPG game. You can participate in Lore's creation in our Discord. 
-                    Best stories will be added to our story campaigns.
+                    Story Campaign — where you can get familiar with the lore
+                    of the Game.
                   </li>
                 </ul>
               </p>
@@ -189,6 +187,8 @@ function App() {
                 Eventually, we plan to create a platform, where people will be
                 able to create their adventures, tournaments, guilds, story
                 campaigns, and even sell tickets to their worlds and mini-games.
+                You can participate in Lore's creation in our Discord. 
+                Best stories will be added to our story campaigns, since we want it to be community driven.
               </p>
             </div>
           </div>
