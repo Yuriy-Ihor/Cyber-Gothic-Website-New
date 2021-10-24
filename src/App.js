@@ -36,7 +36,8 @@ window.onload = function() {
 
 function App() {
 
-  const device = deviceType();
+  // const device = deviceType();
+  const device = "mobile";
 
   const groupStyle = {
     height: device === "mobile" ? window.innerHeight : "100vh"
@@ -152,6 +153,7 @@ function App() {
                     Merging is possible only after special events in game.
                   </li>
                 </ul>
+
               </p>
             </div>
           </div>
