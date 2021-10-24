@@ -20,7 +20,7 @@
   padding-bottom: 20px; */
   width: 100%;
   height: fit-content;
-  background-image: linear-gradient(black 60%, transparent);
+  /* background-image: linear-gradient(black 60%, transparent); */
 }
 
 .header ul {
@@ -101,11 +101,11 @@
   top: 70px;
   left: 0;
   width: 100%;
-  height: calc(100% - 70px);
+  height: 100%;
   visibility: hidden;
   opacity: 0;
   transition: .3s;
-  background: #000;
+  background: black;
 }
 
 .mobile-header #nav-container:focus-within .bg {
@@ -165,7 +165,7 @@
 }
 
 .mobile-header #nav-content {
-  margin-top: 70px;
+  /* margin-top: 70px; */
   padding: 20px;
   width: 90%;
   max-width: 175px;
@@ -183,7 +183,7 @@
 }
 
 .mobile-header #nav-content ul {
-  /* margin-top: 70px; */
+  margin-top: 70px;
   /* pointer-events: none; */
   height: 100%;
   display: flex;
