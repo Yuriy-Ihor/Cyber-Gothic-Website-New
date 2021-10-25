@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Cyber-Gothic-Website-New/static/css/main.c26a962d.chunk.css",
-    "main.js": "/Cyber-Gothic-Website-New/static/js/main.1e58bc5f.chunk.js",
-    "main.js.map": "/Cyber-Gothic-Website-New/static/js/main.1e58bc5f.chunk.js.map",
-    "runtime-main.js": "/Cyber-Gothic-Website-New/static/js/runtime-main.4ba7f058.js",
-    "runtime-main.js.map": "/Cyber-Gothic-Website-New/static/js/runtime-main.4ba7f058.js.map",
-    "static/js/2.8da4d753.chunk.js": "/Cyber-Gothic-Website-New/static/js/2.8da4d753.chunk.js",
-    "static/js/2.8da4d753.chunk.js.map": "/Cyber-Gothic-Website-New/static/js/2.8da4d753.chunk.js.map",
-    "static/js/3.9f89f24e.chunk.js": "/Cyber-Gothic-Website-New/static/js/3.9f89f24e.chunk.js",
-    "static/js/3.9f89f24e.chunk.js.map": "/Cyber-Gothic-Website-New/static/js/3.9f89f24e.chunk.js.map",
+    "main.css": "/Cyber-Gothic-Website-New/static/css/main.0f86b87f.chunk.css",
+    "main.js": "/Cyber-Gothic-Website-New/static/js/main.ce3c72f7.chunk.js",
+    "main.js.map": "/Cyber-Gothic-Website-New/static/js/main.ce3c72f7.chunk.js.map",
+    "runtime-main.js": "/Cyber-Gothic-Website-New/static/js/runtime-main.e2824aca.js",
+    "runtime-main.js.map": "/Cyber-Gothic-Website-New/static/js/runtime-main.e2824aca.js.map",
+    "static/js/2.318afa92.chunk.js": "/Cyber-Gothic-Website-New/static/js/2.318afa92.chunk.js",
+    "static/js/2.318afa92.chunk.js.map": "/Cyber-Gothic-Website-New/static/js/2.318afa92.chunk.js.map",
+    "static/js/3.e6b08442.chunk.js": "/Cyber-Gothic-Website-New/static/js/3.e6b08442.chunk.js",
+    "static/js/3.e6b08442.chunk.js.map": "/Cyber-Gothic-Website-New/static/js/3.e6b08442.chunk.js.map",
     "index.html": "/Cyber-Gothic-Website-New/index.html",
-    "static/css/main.c26a962d.chunk.css.map": "/Cyber-Gothic-Website-New/static/css/main.c26a962d.chunk.css.map",
-    "static/js/2.8da4d753.chunk.js.LICENSE.txt": "/Cyber-Gothic-Website-New/static/js/2.8da4d753.chunk.js.LICENSE.txt",
+    "static/css/main.0f86b87f.chunk.css.map": "/Cyber-Gothic-Website-New/static/css/main.0f86b87f.chunk.css.map",
+    "static/js/2.318afa92.chunk.js.LICENSE.txt": "/Cyber-Gothic-Website-New/static/js/2.318afa92.chunk.js.LICENSE.txt",
     "static/media/index.css": "/Cyber-Gothic-Website-New/static/media/matamata.regular.339bc7fc.otf"
   },
   "entrypoints": [
-    "static/js/runtime-main.4ba7f058.js",
-    "static/js/2.8da4d753.chunk.js",
-    "static/css/main.c26a962d.chunk.css",
-    "static/js/main.1e58bc5f.chunk.js"
+    "static/js/runtime-main.e2824aca.js",
+    "static/js/2.318afa92.chunk.js",
+    "static/css/main.0f86b87f.chunk.css",
+    "static/js/main.ce3c72f7.chunk.js"
   ]
 }
