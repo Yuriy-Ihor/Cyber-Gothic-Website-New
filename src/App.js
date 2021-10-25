@@ -63,14 +63,14 @@ window.onload = function() {
 
 function App() {
 
-  // const device = deviceType();
-  const device = "mobile";
+  const device = deviceType();
+  // const device = "mobile";
 
   const groupStyle = {
     height: device === "mobile" ? window.innerHeight : "100vh"
   };
 
-  const nftPath = process.env.PUBLIC_URL + "/media/";
+  const nftPath = process.env.PUBLIC_URL + "/media/nfts/";
   const toBeUploaded = ["nft1.png", "nft2.png", "nft3.png", "nft4.png", "nft5.png"];
   const images = importAllImages(
     nftPath,
