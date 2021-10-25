@@ -82,6 +82,18 @@ function App() {
   const NftTable = GenerateNftTable(images, nftTableColumns);
   const NftShadowTable = GenerateNftShadowTable(images, nftTableColumns);
 
+  function enableTabsDesktop() {
+    for (let index = 0; index < arguments.length; index++) {
+      spawnText(arguments[index]);
+    }
+  }
+
+  function enableTabsMobile() {
+    enableTabsDesktop(...arguments);
+    document.activeElement.blur();
+    menuIsOpen = false;
+  }
+
 	return (
 
   <div className="main">
@@ -218,13 +230,13 @@ function App() {
         </div>
 
         <div className="parallax-layer parallax-layer--back">
-          <div className="text instant-fade-out" id="text-block-7-1">
+          <div className="text nft-text instant-fade-out" id="text-block-7-1">
             <NftShadowTable />
           </div>
         </div>
 
         <div className="parallax-layer parallax-layer--back">
-          <div className="text instant-fade-out" id="text-block-7-2">
+          <div className="text nft-text instant-fade-out" id="text-block-7-2">
             <NftTable />
           </div>
         </div>
@@ -243,52 +255,37 @@ function App() {
                       <ul className="non-disabling">
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-1');
-                            document.activeElement.blur();
-                            menuIsOpen = false;
+                            enableTabsMobile('text-block-1');
                           }}>NFT</a>
                           </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-2');
-                            document.activeElement.blur();
-                            menuIsOpen = false;
+                            enableTabsMobile('text-block-2');
                           }}>Merge</a>
                           </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-3');
-                            document.activeElement.blur();
-                            menuIsOpen = false;
+                            enableTabsMobile('text-block-3');
                           }}>Generations</a>
                           </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-4');
-                            document.activeElement.blur();
-                            menuIsOpen = false;
+                            enableTabsMobile('text-block-4');
                           }}>Game</a>
                           </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-5');
-                            document.activeElement.blur();
-                            menuIsOpen = false;
+                            enableTabsMobile('text-block-5');
                           }}>Demo</a>
                         </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-6');
-                            document.activeElement.blur();
-                            menuIsOpen = false;
+                            enableTabsMobile('text-block-6');
                           }}>Vision</a>
                         </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-7-1');
-                            spawnText('text-block-7-2');
-                            document.activeElement.blur();
-                            menuIsOpen = false;
+                            enableTabsMobile('text-block-7-1', 'text-block-7-2');
                           }}>Sneak Peak</a>
                         </li>
                       </ul>
@@ -306,37 +303,28 @@ function App() {
                 <ul className="singular-header">
                   <li><img href="#" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" 
                   onClick={() => {
-                    spawnText('text-block-1');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-1');
                   }}/></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-1');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-1');
                   }}>NFT</a></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-2');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-2');
                   }}>Merge</a></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-3');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-3');
                   }}>Generations</a></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-4');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-4');
                   }}>Game</a></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-5');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-5');
                   }}>Demo</a></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-6');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-6');
                   }}>Vision</a></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-7-1');
-                    spawnText('text-block-7-2');
-                    menuIsOpen = false;
+                    enableTabsDesktop('text-block-7-1', 'text-block-7-2');
                   }}>Sneak Peak</a></li>
                 </ul>
             }

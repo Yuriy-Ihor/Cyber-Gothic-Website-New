@@ -248,9 +248,14 @@
   margin-bottom: auto;
   height: fit-content;
   width: 80%;
+  max-width: 800px;
   font-size: larger;
   /* display: flex;
   justify-content: center; */
+}
+
+.nft-text {
+  max-width: none;
 }
 
 .text p {
