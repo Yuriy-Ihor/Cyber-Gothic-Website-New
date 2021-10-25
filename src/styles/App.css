@@ -1,12 +1,7 @@
 .background {
-  height: 90%;
   align-self: center;
-  /* pointer-events: none; */
 }
 
-/* .hidden {
-  display: ;
-} */
 .main {
   width: 100vw;
   overflow: hidden;
@@ -16,8 +11,6 @@
 }
 
 .header {
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
   width: 100%;
   height: fit-content;
   background-image: linear-gradient(black 60%, transparent);

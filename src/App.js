@@ -2,12 +2,12 @@
 
 import './styles/App.css';
 import './styles/parallax.css';
-import './styles/lens-flare.css';
 import './styles/nft-table.css';
 
 import { spawnText, despawnAll } from './components/text-animation';
 import { deviceType } from './components/device-type';
 import { importAllImages, GenerateNftTable, GenerateNftShadowTable } from './components/NftTable';
+import { GenerateDynamicBackground } from './components/DynamicBackground';
 
 let menuIsOpen = false;
 
@@ -82,6 +82,8 @@ function App() {
   const NftTable = GenerateNftTable(images, nftTableColumns);
   const NftShadowTable = GenerateNftShadowTable(images, nftTableColumns);
 
+  const DynamicBackground = GenerateDynamicBackground();
+
   function enableTabsDesktop() {
     for (let index = 0; index < arguments.length; index++) {
       spawnText(arguments[index]);
@@ -101,8 +103,12 @@ function App() {
     <div className="parallax">
       <div className="parallax-group" style={groupStyle}>
 
-        <div className="parallax-layer parallax-layer--back">
+        {/* <div className="parallax-layer parallax-layer--back">
           <img className="background" src={process.env.PUBLIC_URL + "/media/background.png"} alt="" />
+        </div> */}
+
+        <div className="parallax-layer parallax-layer--back">
+          <DynamicBackground />
         </div>
 
         <div className={`${device}-body-text`}>
