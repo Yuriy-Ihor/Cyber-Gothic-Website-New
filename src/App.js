@@ -75,7 +75,7 @@ function App() {
   const images = importAllImages(
     nftPath,
     toBeUploaded,
-    150, 250
+    window.innerWidth / 3, 250
   );
 
   const nftTableColumns = device === "mobile" ? 2 : 3;
