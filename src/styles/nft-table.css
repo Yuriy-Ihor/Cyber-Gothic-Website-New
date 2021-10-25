@@ -13,10 +13,17 @@
 .nft-table td {
     font-size: 0;
     height: fit-content;
+    padding: 5px;
 }
 
 .nft-image {
     margin: 0;
     padding: 0;
-    /* width: 200px; */
+    border: 3px solid white;
+    
+}
+
+.shadow {
+    border: 3px solid black;
+    box-shadow: 5px 5px 35px 15px black;
 }

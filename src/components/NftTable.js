@@ -52,5 +52,34 @@ function GenerateNftTable(images, columns) {
   }
 }
 
+function GenerateNftShadowTable(images, columns) {
+  const rows = splitIntoRows(images, columns);
+  let rowIndex = 0;
+  let cellIndex = 0;
+  return class extends Component {
+    render() {
+      return(
+        <table className="nft-table">
+          <tbody>{
+            rows.map(
+              (row) =>
+                <tr key={rowIndex++}>{
+                  row.map(
+                    (image) => 
+                    <td key={cellIndex++ - (rowIndex - 1) * columns}>
+                      <div className="shadow" style={{
+                        width: image.props.style.width,
+                        height: image.props.style.width
+                      }}></div>
+                    </td>
+                  )
+                }</tr>
+            )
+          }</tbody>
+        </table>
+      );
+    }
+  }
+}
 
-export { importAllImages, GenerateNftTable };
+export { importAllImages, GenerateNftTable, GenerateNftShadowTable };

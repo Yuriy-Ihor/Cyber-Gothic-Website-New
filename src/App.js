@@ -7,7 +7,7 @@ import './styles/nft-table.css';
 
 import { spawnText, despawnAll } from './components/text-animation';
 import { deviceType } from './components/device-type';
-import { importAllImages, GenerateNftTable } from './components/NftTable';
+import { importAllImages, GenerateNftTable, GenerateNftShadowTable } from './components/NftTable';
 
 let menuIsOpen = false;
 
@@ -71,14 +71,16 @@ function App() {
   };
 
   const nftPath = process.env.PUBLIC_URL + "/media/nfts/";
-  const toBeUploaded = ["nft1.png", "nft2.png", "nft3.png", "nft4.png", "nft5.png"];
+  const toBeUploaded = ["nft1.png", "nft2.png", "nft3.png", "nft4.png", "nft5.png", "nft6.gif"];
   const images = importAllImages(
     nftPath,
-    toBeUploaded
+    toBeUploaded,
+    150, 250
   );
 
   const nftTableColumns = device === "mobile" ? 2 : 3;
   const NftTable = GenerateNftTable(images, nftTableColumns);
+  const NftShadowTable = GenerateNftShadowTable(images, nftTableColumns);
 
 	return (
 
@@ -216,7 +218,13 @@ function App() {
         </div>
 
         <div className="parallax-layer parallax-layer--back">
-          <div className="text instant-fade-out" id="text-block-7">
+          <div className="text instant-fade-out" id="text-block-7-1">
+            <NftShadowTable />
+          </div>
+        </div>
+
+        <div className="parallax-layer parallax-layer--back">
+          <div className="text instant-fade-out" id="text-block-7-2">
             <NftTable />
           </div>
         </div>
@@ -277,7 +285,8 @@ function App() {
                         </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
-                            spawnText('text-block-7');
+                            spawnText('text-block-7-1');
+                            spawnText('text-block-7-2');
                             document.activeElement.blur();
                             menuIsOpen = false;
                           }}>Sneak Peak</a>
@@ -325,7 +334,8 @@ function App() {
                     menuIsOpen = false;
                   }}>Vision</a></li>
                   <li><a href="#" onClick={() => {
-                    spawnText('text-block-7');
+                    spawnText('text-block-7-1');
+                    spawnText('text-block-7-2');
                     menuIsOpen = false;
                   }}>Sneak Peak</a></li>
                 </ul>
