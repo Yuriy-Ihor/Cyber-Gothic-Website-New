@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 function deviceType () {
     const ua = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {

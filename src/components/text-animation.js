@@ -1,4 +1,4 @@
-// import {$, fadeOut, fadeIn} from 'jquery';
+/* eslint-disable */
 
 function spawnText(textBlockId, textClass='text', timeout=300) {
     const block = document.getElementById(textBlockId);

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Fragment } from 'react';
 
 function LensBlinkJSX(JSXElement, origin, starting_position) {

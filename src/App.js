@@ -1,10 +1,13 @@
+/* eslint-disable */
+
 import './styles/App.css';
 import './styles/parallax.css';
 import './styles/lens-flare.css';
-// import LensBlinkJSX from './components/lens-blink';
-import {spawnText, despawnAll} from './components/text-animation';
-import {deviceType} from './components/device-type';
-import {NftTable} from './NftTable';
+import './styles/nft-table.css';
+
+import { spawnText, despawnAll } from './components/text-animation';
+import { deviceType } from './components/device-type';
+import { importAllImages, GenerateNftTable } from './components/NftTable';
 
 let menuIsOpen = false;
 
@@ -47,16 +50,35 @@ window.onload = function() {
       }
     );
   } catch (TypeError) {}  
+
+  document.addEventListener(
+    'click',
+    (e) => {
+      if (!e.target.classList.contains("non-disabling")) {
+        menuIsOpen = false
+      }
+    }
+  );
 }
 
 function App() {
 
-  const device = deviceType();
-  // const device = "mobile";
+  // const device = deviceType();
+  const device = "mobile";
 
   const groupStyle = {
     height: device === "mobile" ? window.innerHeight : "100vh"
   };
+
+  const nftPath = process.env.PUBLIC_URL + "/media/";
+  const toBeUploaded = ["nft1.png", "nft2.png", "nft3.png", "nft4.png", "nft5.png"];
+  const images = importAllImages(
+    nftPath,
+    toBeUploaded
+  );
+
+  const nftTableColumns = device === "mobile" ? 2 : 3;
+  const NftTable = GenerateNftTable(images, nftTableColumns);
 
 	return (
 
@@ -88,7 +110,8 @@ function App() {
             <div className="text instant-fade-out" id="text-block-2">
               <p>
                 We also plan to implement a NFT merging system.
-                <ul>
+              </p>
+              <ul>
                   <li>
                     If you collect 4 NFTs from 1 collection (Generation) you can
                     merge them into 1 next Level NFT.
@@ -112,8 +135,6 @@ function App() {
                     Merging is possible only after special events in game.
                   </li>
                 </ul>
-
-              </p>
             </div>
           </div>
 
@@ -145,7 +166,8 @@ function App() {
                 Everyone has his own reasons to come to Purgatory, but none 
                 knows how to get out of there. 
                 At launch we are planning to release next features:
-                <ul>
+              </p>
+              <ul>
                   <li>
                     PvP matches, each won battle in PvP is counted and
                     displayed on the leaderboard. This way the more you win,
@@ -162,7 +184,6 @@ function App() {
                     of the Game.
                   </li>
                 </ul>
-              </p>
             </div>
           </div>
 
@@ -208,44 +229,65 @@ function App() {
 
                 <div className="mobile-header">
                   <div id="nav-container">
-                    <div class="bg"></div>
+                    <div className="bg"></div>
 
-                    <div id="nav-content" tabindex="0">
-                      <ul>
-                        <li><a href="#" onClick={() => {
-                          spawnText('text-block-1');
-                          document.activeElement.blur();
-                        }}>NFT</a></li>
-                        <li><a href="#" onClick={() => {
-                          spawnText('text-block-2');
-                          document.activeElement.blur();
-                        }}>Merge</a></li>
-                        <li><a href="#" onClick={() => {
-                          spawnText('text-block-3');
-                          document.activeElement.blur();
-                        }}>Generations</a></li>
-                        <li><a href="#" onClick={() => {
-                          spawnText('text-block-4');
-                          document.activeElement.blur();
-                        }}>Game</a></li>
-                        <li><a href="#" onClick={() => {
-                          spawnText('text-block-5');
-                          document.activeElement.blur();
-                        }}>Demo</a></li>
-                        <li><a href="#" onClick={() => {
-                          spawnText('text-block-6');
-                          document.activeElement.blur();
-                        }}>Vision</a></li>
-                        <li><a href="#" onClick={() => {
-                          spawnText('text-block-7');
-                          document.activeElement.blur();
-                        }}>Sneak Peak</a></li>
+                    <div id="nav-content" className="non-disabling" tabIndex="0">
+                      <ul className="non-disabling">
+                        <li className="non-disabling">
+                          <a className="non-disabling" href="#" onClick={() => {
+                            spawnText('text-block-1');
+                            document.activeElement.blur();
+                            menuIsOpen = false;
+                          }}>NFT</a>
+                          </li>
+                        <li className="non-disabling">
+                          <a className="non-disabling" href="#" onClick={() => {
+                            spawnText('text-block-2');
+                            document.activeElement.blur();
+                            menuIsOpen = false;
+                          }}>Merge</a>
+                          </li>
+                        <li className="non-disabling">
+                          <a className="non-disabling" href="#" onClick={() => {
+                            spawnText('text-block-3');
+                            document.activeElement.blur();
+                            menuIsOpen = false;
+                          }}>Generations</a>
+                          </li>
+                        <li className="non-disabling">
+                          <a className="non-disabling" href="#" onClick={() => {
+                            spawnText('text-block-4');
+                            document.activeElement.blur();
+                            menuIsOpen = false;
+                          }}>Game</a>
+                          </li>
+                        <li className="non-disabling">
+                          <a className="non-disabling" href="#" onClick={() => {
+                            spawnText('text-block-5');
+                            document.activeElement.blur();
+                            menuIsOpen = false;
+                          }}>Demo</a>
+                        </li>
+                        <li className="non-disabling">
+                          <a className="non-disabling" href="#" onClick={() => {
+                            spawnText('text-block-6');
+                            document.activeElement.blur();
+                            menuIsOpen = false;
+                          }}>Vision</a>
+                        </li>
+                        <li className="non-disabling">
+                          <a className="non-disabling" href="#" onClick={() => {
+                            spawnText('text-block-7');
+                            document.activeElement.blur();
+                            menuIsOpen = false;
+                          }}>Sneak Peak</a>
+                        </li>
                       </ul>
                     </div>
-                    <div class="button" id="menu-button" tabindex="0">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
+                    <div className="button non-disabling" id="menu-button" tabIndex="0">
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
                     </div>
                   </div>
                 </div>
@@ -256,27 +298,35 @@ function App() {
                   <li><img href="#" src={process.env.PUBLIC_URL + "/media/logo.png"} alt="" 
                   onClick={() => {
                     spawnText('text-block-1');
+                    menuIsOpen = false;
                   }}/></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-1');
+                    menuIsOpen = false;
                   }}>NFT</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-2');
+                    menuIsOpen = false;
                   }}>Merge</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-3');
+                    menuIsOpen = false;
                   }}>Generations</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-4');
+                    menuIsOpen = false;
                   }}>Game</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-5');
+                    menuIsOpen = false;
                   }}>Demo</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-6');
+                    menuIsOpen = false;
                   }}>Vision</a></li>
                   <li><a href="#" onClick={() => {
                     spawnText('text-block-7');
+                    menuIsOpen = false;
                   }}>Sneak Peak</a></li>
                 </ul>
             }
@@ -287,7 +337,7 @@ function App() {
         device === "mobile" ?
         <div className="parallax-layer parallax-layer--back">
           <header className="header no-bg">
-            <img href="#" class="mobile-img" src={process.env.PUBLIC_URL + "/media/logo.png"} alt=""
+            <img href="#" className="mobile-img" src={process.env.PUBLIC_URL + "/media/logo.png"} alt=""
             onClick={() => {
               spawnText('text-block-1');
               document.activeElement.blur();
