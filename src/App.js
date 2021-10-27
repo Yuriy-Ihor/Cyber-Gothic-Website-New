@@ -2,7 +2,13 @@
 
 import './styles/App.css';
 import './styles/parallax.css';
+import './styles/menu.css';
 import './styles/nft-table.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
+
 
 import { spawnText, despawnAll } from './components/text-animation';
 import { deviceType } from './components/device-type';
@@ -357,9 +363,24 @@ function App() {
         <div className="parallax-layer parallax-layer--back">
           <footer className="footer" id="footer">
             <ul>
-              <li><a href="https://twitter.com/Cyber_Gothica" target="_blank">Twitter</a></li>
-              <li><a href="https://discord.com/invite/qxreNz7WMZ" target="_blank">Discord</a></li>
-              <li><a href="mailto:cyber.gothica.nft@gmail.com" target="_blank">Email</a></li>
+              <li>
+                <a href="https://twitter.com/Cyber_Gothica" target="_blank" className="footer-wrapper-link">
+                  <FontAwesomeIcon icon={faTwitter} className="footer-inner-icon" />
+                  <span className="footer-inner-link">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.com/invite/qxreNz7WMZ" target="_blank" className="footer-wrapper-link">
+                  <FontAwesomeIcon icon={faDiscord} className="footer-inner-icon" />
+                  <span className="footer-inner-link">Discord</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:cyber.gothica.nft@gmail.com" target="_blank" className="footer-wrapper-link">
+                  <FontAwesomeIcon icon={faEnvelope} className="footer-inner-icon" />
+                  <span className="footer-inner-link">Mail</span>
+                </a>
+              </li>
             </ul>
             <p><span>&#169;</span> Cyber Gothica, Ukraine, {new Date().getFullYear()}. All rights reserved.</p>
           </footer>
