@@ -10,10 +10,12 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
 
 
-import { spawnText, despawnAll } from './components/text-animation';
-import { deviceType } from './components/device-type';
+import { spawnText, despawnAll } from './components/TextAnimation';
+import { DeviceType } from './components/DeviceType';
 import { importAllImages, GenerateNftTable, GenerateNftShadowTable } from './components/NftTable';
 import { GenerateDynamicBackground } from './components/DynamicBackground';
+import { GenerateBackgroundAimationOverlay } from './components/BackgroundAnimationOverlay';
+
 
 let menuIsOpen = false;
 
@@ -69,7 +71,7 @@ window.onload = function() {
 
 function App() {
 
-  const device = deviceType();
+  const device = DeviceType();
   // const device = "mobile";
 
   const groupStyle = {
@@ -89,6 +91,7 @@ function App() {
   const NftShadowTable = GenerateNftShadowTable(images, nftTableColumns);
 
   const DynamicBackground = GenerateDynamicBackground();
+  const BackgroundAnimationOverlay = GenerateBackgroundAimationOverlay();
 
   function enableTabsDesktop() {
     for (let index = 0; index < arguments.length; index++) {
@@ -115,6 +118,10 @@ function App() {
 
         <div className="parallax-layer parallax-layer--back">
           <DynamicBackground />
+        </div>
+
+        <div className="parallax-layer parallax-layer--back">
+          <BackgroundAnimationOverlay />
         </div>
 
         <div className={`${device}-body-text`}>

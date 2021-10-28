@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { deviceType } from './device-type';
+import { DeviceType } from './DeviceType';
 
-function GenerateDynamicBackground() {
-    const device = deviceType();
-    const backgroundStyle = {
-        width: device === "desktop" ? "100%" : "auto",
+function BackgroundSize() {
+    const device = DeviceType();
+    return {
+        width: device === "desktop" || device === "tablet" ? "100%" : "auto",
         height: device === "mobile" ? "90%" : "auto"
     };
+}
+
+function GenerateDynamicBackground() {
+    const device = DeviceType();
+    const backgroundStyle = BackgroundSize();
     
     return class extends Component {
         render() {
@@ -22,4 +27,4 @@ function GenerateDynamicBackground() {
     };
 }
 
-export { GenerateDynamicBackground };
+export { GenerateDynamicBackground, BackgroundSize };

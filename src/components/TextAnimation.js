@@ -31,4 +31,4 @@ function despawnAll(textClass='text') {
     }
 }
 
-export {spawnText, despawnText, despawnAll};
+export { spawnText, despawnText, despawnAll };

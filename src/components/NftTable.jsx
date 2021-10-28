@@ -1,12 +1,12 @@
 /* eslint-disable */
 
 import React, { Component } from 'react';
-import { deviceType } from './device-type';
+import { DeviceType } from './DeviceType';
 
 function importAllImages(path, nameList, mobileImageSize=150, desktopImageSize=250) {
   let index = 0;
   let imageStyle = {
-    width: deviceType() === "mobile" ? mobileImageSize : desktopImageSize
+    width: DeviceType() === "mobile" ? mobileImageSize : desktopImageSize
   };
   let images = nameList.map(
     (name) => {

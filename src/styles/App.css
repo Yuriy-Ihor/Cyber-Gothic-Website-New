@@ -127,6 +127,7 @@
 .footer-inner-icon {
   margin-top: auto;
   margin-bottom: auto;
+  font-size: large;
 }
 
 .footer-inner-link {
@@ -194,7 +195,7 @@
   font-size: smaller;
 }
 
-
-
-
-
+#background-animation {
+  width: 100%;
+  height: 100%;
+}

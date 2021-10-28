@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-function deviceType () {
+function DeviceType() {
     const ua = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
         return "tablet";
@@ -11,4 +11,4 @@ function deviceType () {
     return "desktop";
 }
 
-export {deviceType};
+export { DeviceType };
