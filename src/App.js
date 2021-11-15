@@ -127,45 +127,37 @@ function App() {
         <div className={`${device}-body-text`}>
           <div className="parallax-layer parallax-layer--back">
             <div className="text instant-fade-out" id="text-block-1">
+              <h1>NFT-based game, where your NFT represents a lost Spirit of a Warrior</h1>
+              <b>All warriors are split into different generations.</b> 
+              <br />
               <p>
-                We are developing an NFT-based game where your NFT
-                represents a lost Soul of a Warrior. At the initial stage of game
-                development, there will be 8192 Warrior-NFTs. However,
-                8192 players for an MMORPG is too few, therefore we plan to
-                extend the game for future players. But our initial holders will
-                have the most valued assets in the game and special privileges in
+                First generation has 8192 warriors.
+                These warriors will be the most valuable, and their holders will have special privileges in
                 the game and abilities unavailable to others.
-              </p>          
+              </p>      
             </div>
           </div>
 
           <div className="parallax-layer parallax-layer--back">
             <div className="text instant-fade-out" id="text-block-2">
-              <p>
-                We also plan to implement a NFT merging system.
-              </p>
+              <h2>
+                All NFTs from the first 3 generations will have their own rank
+              </h2>
+              <p>And players can even increase it!</p>
               <ul>
                   <li>
-                    If you collect 4 NFTs from 1 collection (Generation) you can
-                    merge them into 1 next Level NFT.
+                    If you collect 4 NFTs from the same generation with the same rank, you can
+                    merge them into 1 NFT with higher rank
                   </li>
                   <li>
-                    After the merge, all 4 NFTs are burned, and 1 new is created.
-                    This creates a diminiіhing supply and raises the price and
-                    rarity for both levels of NFT holders.
+                    After the merge, all 4 NFTs are burnt, but 1 new is created.
+                    It raises both price and rarity for NFTs and creates a diminiіhing supply
                   </li>
                   <li>
-                    NFTs can be merged only within the same collection and within same level.
+                    Every merge improves your in-game stats, making your warrior more valuable, and creates a more complex Art.
                   </li>
                   <li>
-                    Every merge improves your stats, your NFT value 
-                    and creates a more complex Art.
-                  </li>
-                  <li>
-                    It is possible to make a maximum of 4 merges within the collection.
-                  </li>
-                  <li>
-                    Merging is possible only after special events in game.
+                    Player can perform 4 merges within the collection.
                   </li>
                 </ul>
             </div>
@@ -173,20 +165,14 @@ function App() {
 
           <div className="parallax-layer parallax-layer--back">
             <div className="text instant-fade-out" id="text-block-3">
+              <b>
+                After initial release, there will be 2 more generations of warriors
+              </b>
               <p>
-                After initial release, there will be 2 more generations of souls.
-                The value of previous generations will be
-                preserved since to get to the initial level
-                of Gen 1 Soul, it requires 4 merges (256
-                Gen 2 Souls) and for Gen 3 it is impossible
-                to get to the initial level of Gen 1.
-              </p>
-              <p>
-                When the game is fully developed there will be an Infinite supply
-                of NFTs that cannot be merged and will be sold for the equivalent
-                of 5-10$. That would be the entry point as a price to play the
-                game. They will have special classes and abilities that will be
-                introduced in the future.
+                All NFTs from one generation will be more valuable than NFTs from the next.
+                But one problem still remain - how to be with new players, how to want to play the game as well and get their unique Warrior?
+                Here is why we will create one more generation - it will have unlimited supply, and each NFT will cost a small price - 
+                an entrypoint to our game. 
               </p>
             </div>
           </div>
@@ -198,23 +184,21 @@ function App() {
                 stuck in the Purgatory, where there's no way to truly die. 
                 Everyone has his own reasons to come to Purgatory, but none 
                 knows how to get out of there. 
-                At launch we are planning to release next features:
+                At launch we plan to release next features:
               </p>
               <ul>
                   <li>
-                    PvP matches, each won battle in PvP is counted and
-                    displayed on the leaderboard. This way the more you win,
-                    the higher your NFT is ranked.
+                    PvP Matches — where Warriors fight with each other. Every victory is counted and
+                    displayed on the leaderboard. The more you win, the higher your NFT is ranked
                   </li>
                   <li>
-                    Arena — where you can fight Demons of the Purgatory.
+                    Arena — where you can fight Demons of the Purgatory
                   </li>
                   <li>
-                    Tournament — where you will fight other players.
+                    Tournament — where you will fight other players
                   </li>
                   <li>
-                    Story Campaign — where you can get familiar with the lore
-                    of the Game.
+                    Story Campaign — where you can get familiar with the game lore
                   </li>
                 </ul>
             </div>
@@ -222,10 +206,14 @@ function App() {
 
           <div className="parallax-layer parallax-layer--back">
             <div className="text instant-fade-out" id="text-block-5">
+              <h1>
+                We are pleased to present you our current game prototype
+              </h1>
               <p>
-                We are pleased to present you our current game demo.
-                Do note that this is only a small tiny fraction of the finished game, 
-                and is still work in progress. Everything you see here is a subject to change. 
+                
+                This is only a small tiny fraction of the final product 
+                Everything you see here is a subject to change
+                
                 We appreciate feedback in any form, so please contact us with any suggestions 
                 that you might have.
               </p>
@@ -275,7 +263,7 @@ function App() {
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
                             enableTabsMobile('text-block-1');
-                          }}>NFT</a>
+                          }}>HOME</a>
                           </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
@@ -290,7 +278,7 @@ function App() {
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
                             enableTabsMobile('text-block-4');
-                          }}>Game</a>
+                          }}>About</a>
                           </li>
                         <li className="non-disabling">
                           <a className="non-disabling" href="#" onClick={() => {
@@ -326,7 +314,7 @@ function App() {
                   }}/></li>
                   <li><a href="#" onClick={() => {
                     enableTabsDesktop('text-block-1');
-                  }}>NFT</a></li>
+                  }}>HOME</a></li>
                   <li><a href="#" onClick={() => {
                     enableTabsDesktop('text-block-2');
                   }}>Merge</a></li>
@@ -335,7 +323,7 @@ function App() {
                   }}>Generations</a></li>
                   <li><a href="#" onClick={() => {
                     enableTabsDesktop('text-block-4');
-                  }}>Game</a></li>
+                  }}>About</a></li>
                   <li><a href="#" onClick={() => {
                     enableTabsDesktop('text-block-5');
                   }}>Demo</a></li>

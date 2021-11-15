@@ -148,6 +148,10 @@
   justify-content: center; */
 }
 
+.text > p, .text > ul {
+  line-height: 30px;
+}
+
 .nft-text {
   max-width: none;
 }
