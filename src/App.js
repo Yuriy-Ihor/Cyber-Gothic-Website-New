@@ -211,9 +211,9 @@ function App() {
               </h1>
               <p>
                 
-                This is only a small tiny fraction of the final product 
-                Everything you see here is a subject to change
-                
+                This is only a small tiny fraction of the final product <br />
+                Everything you see here is a subject to change <br />
+                <br />
                 We appreciate feedback in any form, so please contact us with any suggestions 
                 that you might have.
               </p>
